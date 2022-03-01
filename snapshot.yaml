@@ -253,7 +253,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: 6
+      sort: 7
       width: full
       translations: null
       note: null
@@ -300,7 +300,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: 7
+      sort: 8
       width: full
       translations: null
       note: null
@@ -342,7 +342,7 @@ fields:
         template: '{{name}}'
       readonly: false
       hidden: false
-      sort: 8
+      sort: 9
       width: full
       translations: null
       note: null
@@ -423,6 +423,60 @@ fields:
       readonly: false
       hidden: false
       sort: 5
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: category
+    type: string
+    schema:
+      name: category
+      table: articles
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: category
+      special: null
+      interface: select-dropdown
+      options:
+        choices:
+          - text: History
+            value: history
+          - text: Geography
+            value: geography
+          - text: Economics
+            value: economics
+          - text: Law
+            value: law
+          - text: Politics
+            value: politics
+          - text: Firm
+            value: firm
+          - text: Design
+            value: design
+      display: null
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 6
       width: full
       translations: null
       note: null
@@ -1227,6 +1281,7 @@ fields:
             value: cofounder
           - text: Writer
             value: writer
+        allowOther: true
       display: labels
       display_options: null
       readonly: false
@@ -1280,28 +1335,6 @@ fields:
       required: true
       group: null
 relations:
-  - collection: partners
-    field: logo
-    related_collection: directus_files
-    schema:
-      constraint_name: partners_logo_foreign
-      table: partners
-      column: logo
-      foreign_key_schema: public
-      foreign_key_table: directus_files
-      foreign_key_column: id
-      on_update: NO ACTION
-      on_delete: NO ACTION
-    meta:
-      many_collection: partners
-      many_field: logo
-      one_collection: directus_files
-      one_field: null
-      one_collection_field: null
-      one_allowed_collections: null
-      junction_field: null
-      sort_field: null
-      one_deselect_action: nullify
   - collection: articles
     field: main_article_image
     related_collection: directus_files
@@ -1317,6 +1350,28 @@ relations:
     meta:
       many_collection: articles
       many_field: main_article_image
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+  - collection: partners
+    field: logo
+    related_collection: directus_files
+    schema:
+      constraint_name: partners_logo_foreign
+      table: partners
+      column: logo
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      on_update: NO ACTION
+      on_delete: NO ACTION
+    meta:
+      many_collection: partners
+      many_field: logo
       one_collection: directus_files
       one_field: null
       one_collection_field: null
