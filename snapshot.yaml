@@ -1,0 +1,1370 @@
+version: 1
+directus: 9.5.2
+collections:
+  - collection: articles
+    meta:
+      collection: articles
+      icon: null
+      note: null
+      display_template: null
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: null
+      group: null
+      collapse: open
+    schema:
+      schema: public
+      name: articles
+      comment: null
+  - collection: partners
+    meta:
+      collection: partners
+      icon: null
+      note: null
+      display_template: null
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: null
+      group: null
+      collapse: open
+    schema:
+      schema: public
+      name: partners
+      comment: null
+  - collection: videos
+    meta:
+      collection: videos
+      icon: null
+      note: null
+      display_template: null
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: null
+      group: null
+      collapse: open
+    schema:
+      schema: public
+      name: videos
+      comment: null
+  - collection: writers
+    meta:
+      collection: writers
+      icon: null
+      note: null
+      display_template: null
+      hidden: false
+      singleton: false
+      translations: null
+      archive_field: null
+      archive_app_filter: true
+      archive_value: null
+      unarchive_value: null
+      sort_field: null
+      accountability: all
+      color: null
+      item_duplication_fields: null
+      sort: null
+      group: null
+      collapse: open
+    schema:
+      schema: public
+      name: writers
+      comment: null
+fields:
+  - collection: articles
+    field: id
+    type: uuid
+    schema:
+      name: id
+      table: articles
+      schema: public
+      data_type: uuid
+      is_nullable: false
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: id
+      special:
+        - uuid
+      interface: input
+      options: null
+      display: null
+      display_options: null
+      readonly: true
+      hidden: true
+      sort: 1
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: created_at
+    type: timestamp
+    schema:
+      name: created_at
+      table: articles
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: created_at
+      special:
+        - date-created
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: 2
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: updated_at
+    type: timestamp
+    schema:
+      name: updated_at
+      table: articles
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: updated_at
+      special:
+        - date-updated
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: 3
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: articles
+    field: main_article_image
+    type: uuid
+    schema:
+      name: main_article_image
+      table: articles
+      schema: public
+      data_type: uuid
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+    meta:
+      collection: articles
+      field: main_article_image
+      special:
+        - file
+      interface: file-image
+      options: null
+      display: image
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 6
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: body
+    type: text
+    schema:
+      name: body
+      table: articles
+      schema: public
+      data_type: text
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: body
+      special: null
+      interface: input-rich-text-md
+      options:
+        toolbar:
+          - bold
+          - bullist
+          - numlist
+          - table
+          - empty
+          - image
+          - link
+      display: formatted-value
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 7
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: author
+    type: uuid
+    schema:
+      name: author
+      table: articles
+      schema: public
+      data_type: uuid
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: public
+      foreign_key_table: writers
+      foreign_key_column: id
+    meta:
+      collection: articles
+      field: author
+      special:
+        - m2o
+      interface: select-dropdown-m2o
+      options:
+        template: '{{name}}'
+      display: related-values
+      display_options:
+        template: '{{name}}'
+      readonly: false
+      hidden: false
+      sort: 8
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: heading
+    type: string
+    schema:
+      name: heading
+      table: articles
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: heading
+      special: null
+      interface: input
+      options: null
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 4
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: articles
+    field: subheading
+    type: text
+    schema:
+      name: subheading
+      table: articles
+      schema: public
+      data_type: text
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: articles
+      field: subheading
+      special: null
+      interface: input-multiline
+      options:
+        softLength: 150
+        trim: true
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 5
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: partners
+    field: id
+    type: uuid
+    schema:
+      name: id
+      table: partners
+      schema: public
+      data_type: uuid
+      is_nullable: false
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: partners
+      field: id
+      special:
+        - uuid
+      interface: input
+      options: null
+      display: null
+      display_options: null
+      readonly: true
+      hidden: true
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: partners
+    field: created_at
+    type: timestamp
+    schema:
+      name: created_at
+      table: partners
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: partners
+      field: created_at
+      special:
+        - date-created
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: partners
+    field: updated_at
+    type: timestamp
+    schema:
+      name: updated_at
+      table: partners
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: partners
+      field: updated_at
+      special:
+        - date-updated
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: partners
+    field: name
+    type: string
+    schema:
+      name: name
+      table: partners
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: partners
+      field: name
+      special: null
+      interface: input
+      options: null
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: partners
+    field: website_url
+    type: string
+    schema:
+      name: website_url
+      table: partners
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 100
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: partners
+      field: website_url
+      special: null
+      interface: input
+      options: null
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: partners
+    field: logo
+    type: uuid
+    schema:
+      name: logo
+      table: partners
+      schema: public
+      data_type: uuid
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+    meta:
+      collection: partners
+      field: logo
+      special:
+        - file
+      interface: file-image
+      options: null
+      display: image
+      display_options: {}
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: videos
+    field: id
+    type: uuid
+    schema:
+      name: id
+      table: videos
+      schema: public
+      data_type: uuid
+      is_nullable: false
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: id
+      special:
+        - uuid
+      interface: input
+      options: null
+      display: null
+      display_options: null
+      readonly: true
+      hidden: true
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: videos
+    field: created_at
+    type: timestamp
+    schema:
+      name: created_at
+      table: videos
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: created_at
+      special:
+        - date-created
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: videos
+    field: updated_at
+    type: timestamp
+    schema:
+      name: updated_at
+      table: videos
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: updated_at
+      special:
+        - date-updated
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: videos
+    field: title
+    type: string
+    schema:
+      name: title
+      table: videos
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: title
+      special: null
+      interface: input
+      options: null
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: videos
+    field: description
+    type: text
+    schema:
+      name: description
+      table: videos
+      schema: public
+      data_type: text
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: description
+      special: null
+      interface: input-multiline
+      options:
+        softLength: 200
+        trim: true
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: videos
+    field: thumbnail
+    type: uuid
+    schema:
+      name: thumbnail
+      table: videos
+      schema: public
+      data_type: uuid
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: thumbnail
+      special:
+        - file
+      interface: file-image
+      options: null
+      display: image
+      display_options: {}
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: videos
+    field: video_link
+    type: string
+    schema:
+      name: video_link
+      table: videos
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: videos
+      field: video_link
+      special: null
+      interface: input
+      options: null
+      display: raw
+      display_options: {}
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: id
+    type: uuid
+    schema:
+      name: id
+      table: writers
+      schema: public
+      data_type: uuid
+      is_nullable: false
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: true
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: id
+      special:
+        - uuid
+      interface: input
+      options: null
+      display: null
+      display_options: null
+      readonly: true
+      hidden: true
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: writers
+    field: created_at
+    type: timestamp
+    schema:
+      name: created_at
+      table: writers
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: created_at
+      special:
+        - date-created
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: writers
+    field: updated_at
+    type: timestamp
+    schema:
+      name: updated_at
+      table: writers
+      schema: public
+      data_type: timestamp with time zone
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: updated_at
+      special:
+        - date-updated
+      interface: datetime
+      options: null
+      display: datetime
+      display_options:
+        relative: true
+      readonly: true
+      hidden: true
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: false
+      group: null
+  - collection: writers
+    field: name
+    type: string
+    schema:
+      name: name
+      table: writers
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: true
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: name
+      special: null
+      interface: input
+      options: null
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: bio
+    type: text
+    schema:
+      name: bio
+      table: writers
+      schema: public
+      data_type: text
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: bio
+      special: null
+      interface: input-multiline
+      options:
+        trim: true
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: image
+    type: uuid
+    schema:
+      name: image
+      table: writers
+      schema: public
+      data_type: uuid
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+    meta:
+      collection: writers
+      field: image
+      special:
+        - file
+      interface: file-image
+      options: null
+      display: image
+      display_options:
+        circle: true
+      readonly: false
+      hidden: false
+      sort: null
+      width: full
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: role
+    type: string
+    schema:
+      name: role
+      table: writers
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: role
+      special: null
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Founder
+            value: founder
+          - text: Cofounder
+            value: cofounder
+          - text: Writer
+            value: writer
+      display: labels
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: importance
+    type: integer
+    schema:
+      name: importance
+      table: writers
+      schema: public
+      data_type: integer
+      is_nullable: true
+      generation_expression: null
+      default_value: 999
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: importance
+      special: null
+      interface: input
+      options:
+        max: 1000
+        min: 1
+      display: raw
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: null
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+relations:
+  - collection: partners
+    field: logo
+    related_collection: directus_files
+    schema:
+      constraint_name: partners_logo_foreign
+      table: partners
+      column: logo
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      on_update: NO ACTION
+      on_delete: NO ACTION
+    meta:
+      many_collection: partners
+      many_field: logo
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+  - collection: articles
+    field: main_article_image
+    related_collection: directus_files
+    schema:
+      constraint_name: articles_main_article_image_foreign
+      table: articles
+      column: main_article_image
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      on_update: NO ACTION
+      on_delete: NO ACTION
+    meta:
+      many_collection: articles
+      many_field: main_article_image
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+  - collection: writers
+    field: image
+    related_collection: directus_files
+    schema:
+      constraint_name: writers_image_foreign
+      table: writers
+      column: image
+      foreign_key_schema: public
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      on_update: NO ACTION
+      on_delete: NO ACTION
+    meta:
+      many_collection: writers
+      many_field: image
+      one_collection: directus_files
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
+  - collection: articles
+    field: author
+    related_collection: writers
+    schema:
+      constraint_name: articles_author_foreign
+      table: articles
+      column: author
+      foreign_key_schema: public
+      foreign_key_table: writers
+      foreign_key_column: id
+      on_update: NO ACTION
+      on_delete: NO ACTION
+    meta:
+      many_collection: articles
+      many_field: author
+      one_collection: writers
+      one_field: null
+      one_collection_field: null
+      one_allowed_collections: null
+      junction_field: null
+      sort_field: null
+      one_deselect_action: nullify
