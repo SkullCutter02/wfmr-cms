@@ -253,7 +253,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: 7
+      sort: 8
       width: full
       translations: null
       note: null
@@ -300,7 +300,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: 8
+      sort: 9
       width: full
       translations: null
       note: null
@@ -342,7 +342,7 @@ fields:
         template: '{{name}}'
       readonly: false
       hidden: false
-      sort: 9
+      sort: 7
       width: full
       translations: null
       note: null
@@ -1037,7 +1037,7 @@ fields:
       display_options: null
       readonly: true
       hidden: true
-      sort: null
+      sort: 1
       width: full
       translations: null
       note: null
@@ -1078,7 +1078,7 @@ fields:
         relative: true
       readonly: true
       hidden: true
-      sort: null
+      sort: 2
       width: half
       translations: null
       note: null
@@ -1119,7 +1119,7 @@ fields:
         relative: true
       readonly: true
       hidden: true
-      sort: null
+      sort: 3
       width: half
       translations: null
       note: null
@@ -1158,7 +1158,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: null
+      sort: 4
       width: full
       translations: null
       note: null
@@ -1198,7 +1198,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: null
+      sort: 5
       width: full
       translations: null
       note: null
@@ -1239,7 +1239,7 @@ fields:
         circle: true
       readonly: false
       hidden: false
-      sort: null
+      sort: 6
       width: full
       translations: null
       note: null
@@ -1286,7 +1286,7 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: null
+      sort: 7
       width: half
       translations: null
       note: null
@@ -1327,7 +1327,93 @@ fields:
       display_options: null
       readonly: false
       hidden: false
-      sort: null
+      sort: 10
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: isFounder
+    type: boolean
+    schema:
+      name: isFounder
+      table: writers
+      schema: public
+      data_type: boolean
+      is_nullable: true
+      generation_expression: null
+      default_value: false
+      is_generated: false
+      max_length: null
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: isFounder
+      special:
+        - boolean
+      interface: boolean
+      options: null
+      display: boolean
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 9
+      width: half
+      translations: null
+      note: null
+      conditions: null
+      required: true
+      group: null
+  - collection: writers
+    field: department
+    type: string
+    schema:
+      name: department
+      table: writers
+      schema: public
+      data_type: character varying
+      is_nullable: true
+      generation_expression: null
+      default_value: null
+      is_generated: false
+      max_length: 255
+      comment: null
+      numeric_precision: null
+      numeric_scale: null
+      is_unique: false
+      is_primary_key: false
+      has_auto_increment: false
+      foreign_key_schema: null
+      foreign_key_table: null
+      foreign_key_column: null
+    meta:
+      collection: writers
+      field: department
+      special: null
+      interface: select-dropdown
+      options:
+        choices:
+          - text: Economics
+            value: economics
+          - text: Law
+            value: law
+          - text: Design
+            value: design
+      display: labels
+      display_options: null
+      readonly: false
+      hidden: false
+      sort: 8
       width: half
       translations: null
       note: null
